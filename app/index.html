@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Welcome to the official Angliabet Casino website in English. Discover our exciting games, generous bonuses, secure banking, and world-class customer support. Join us today!" />
+  <title>Angliabet Casino – Official Website in English | Play & Win</title>
+  <link rel="canonical" href="./" />
+  <link rel="icon" type="image/png" href="../favicon (2).png" />
+  <style>
+
+    :root {
+      --bg-main: #06051b;
+      --panel: #101033;
+      --header-footer: #00247d;
+      --accent: #1bb93d;
+      --text: #eef2ff;
+      --muted: #b5bfd8;
+      --border: #2c3762;
+      --gold: #ffd34d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 15% 8%, #1a1f52 0%, var(--bg-main) 40%, #030210 100%);
+      color: var(--text);
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--header-footer);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      min-width: 0;
+    }
+
+    .logo img {
+      width: 170px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #031108;
+      font-weight: 800;
+      padding: 11px 18px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 18px rgba(27, 185, 61, 0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(27, 185, 61, 0.45);
+    }
+
+    .hero {
+      padding: 42px 0 22px;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.2;
+      margin: 0 0 14px;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      text-shadow: 0 5px 18px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-banner {
+      margin: 18px auto 22px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 0 20px 38px rgba(0, 0, 0, 0.45);
+      background: #0d133f;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      aspect-ratio: 16 / 6;
+      object-fit: cover;
+    }
+
+    .cta-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+    }
+
+    .cta {
+      font-size: 1.1rem;
+      padding: 14px 34px;
+      letter-spacing: 0.2px;
+      animation: pulse 1.6s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(27, 185, 61, 0.65);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(27, 185, 61, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(27, 185, 61, 0);
+      }
+    }
+
+    section {
+      margin: 44px 0;
+    }
+
+    .section-panel {
+      background: linear-gradient(180deg, rgba(16, 16, 51, 0.92), rgba(9, 9, 30, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .game-card {
+      background: #090b25;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #212959;
+      aspect-ratio: 1 / 1;
+      position: relative;
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .game-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .game-card span {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      background: rgba(0, 0, 0, 0.64);
+      color: #fff;
+      font-size: 0.82rem;
+      border-radius: 8px;
+      padding: 5px 8px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .seo-block p {
+      margin-top: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .seo-block ul,
+    .seo-block ol {
+      margin: 0 0 18px;
+      padding-left: 24px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .seo-table-wrap {
+      overflow-x: auto;
+      border: 1px solid #2a3564;
+      border-radius: 12px;
+      margin-top: 8px;
+    }
+
+    .seo-illustration {
+      margin: 20px 0;
+      border: 1px solid #2a3564;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #080a24;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+    }
+
+    .seo-illustration img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .seo-block .review,
+    .seo-block .faq {
+      margin: 12px 0;
+      background: #0a0d2f;
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .seo-block .faq p,
+    .seo-block .review p {
+      margin: 0;
+    }
+
+    .seo-block .faq p + p,
+    .seo-block .review p + p {
+      margin-top: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+      background: #080a24;
+    }
+
+    th,
+    td {
+      border: 1px solid #2a3564;
+      padding: 12px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      color: #fff;
+      background: #111a4d;
+    }
+
+    .payment-grid,
+    .providers-grid,
+    .trust-grid {
+      display: grid;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .payment-grid {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      margin-top: 14px;
+    }
+
+    .payment-item,
+    .provider-item,
+    .trust-item {
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      background: #0a0d2a;
+      padding: 10px;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .payment-item img,
+    .provider-item img,
+    .trust-item img {
+      max-height: 44px;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .review {
+      background: #0a0d2f;
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .review h3 {
+      margin-bottom: 6px;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .review .stars {
+      color: var(--gold);
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      font-size: 0.95rem;
+    }
+
+    .review p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #090d2c;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      padding: 15px 16px;
+      background: transparent;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-size: 1.2rem;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    .faq-question[aria-expanded="true"]::after {
+      content: "-";
+      transform: scale(1.05);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: var(--muted);
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 0 0 15px;
+    }
+
+    .page-updated {
+      text-align: center;
+      font-weight: 700;
+      color: #d4ddff;
+      margin: 42px auto 18px;
+      letter-spacing: 0.2px;
+    }
+
+    footer {
+      background: var(--header-footer);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 10px;
+      padding: 26px 0 20px;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      margin: 0 0 11px;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      margin-bottom: 20px;
+    }
+
+    .trust-item {
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .trust-item:hover {
+      transform: translateY(-2px);
+      border-color: #4f75ff;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+      text-transform: lowercase;
+    }
+
+    .footer-links a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .providers-grid {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      margin-bottom: 18px;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.92rem;
+      color: #d7deff;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      padding-top: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo {
+        justify-content: center;
+      }
+
+      .header-buttons,
+      .nav-links {
+        justify-content: center;
+      }
+
+      .games-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .reviews {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 660px) {
+      .hero {
+        padding-top: 28px;
+      }
+
+      .section-panel {
+        padding: 18px;
+      }
+
+      .games-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .reviews {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .header-buttons {
+        width: 100%;
+      }
+
+      .header-buttons .btn {
+        flex: 1;
+        min-width: 130px;
+      }
+    }
+  
+    .content-page {
+      margin-top: 42px;
+      margin-bottom: 42px;
+    }
+
+    .content-page h1 {
+      margin-bottom: 16px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+    }
+
+    .content-page .highlight-box {
+      background: linear-gradient(135deg, #101643, #1a2664);
+      border-left: 4px solid #1bb93d;
+      border-radius: 10px;
+      padding: 18px;
+      margin: 16px 0;
+    }
+
+    .content-page .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+      margin: 12px 0 20px;
+    }
+
+    .content-page .feature-card {
+      background: #0a0d2f;
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .content-page .icon {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .content-page section {
+      margin: 0 0 28px;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Angliabet Casino home">
+        <img src="../angliabet.webp" alt="Angliabet logo" />
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../login/">Login</a>
+        <a href="../bonus/">Bonus</a>
+        <a href="../app/">App</a>
+      </nav>
+
+      <div class="header-buttons">
+        <a class="btn" href="../login/" aria-label="Login">Login</a>
+        <a class="btn" href="../contact-us/" aria-label="Register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section-panel seo-block content-page">
+<h1>Angliabet Casino</h1>
+<p>Official Website in English – Your Premier Online Gaming Destination</p>
+
+<section id="welcome">
+    <h2>Welcome to Angliabet Casino</h2>
+    <p>Welcome to the official Angliabet Casino website in English – the home of thrilling entertainment, generous rewards, and a gaming experience crafted for players who demand the very best. We are proud to offer one of the most comprehensive and exciting online casino platforms available today, bringing together thousands of games, industry-leading bonuses, and a safe, regulated environment where every player can feel confident and valued.</p>
+    <p>At Angliabet Casino, we believe that great gaming is about more than just spinning reels or placing bets. It is about the full experience – the atmosphere, the excitement, the fairness, and the community. That is why we have invested heavily in building a platform that not only meets but exceeds the expectations of our players at every turn. Whether you are a seasoned high-roller or a casual player looking for some weekend fun, we have everything you need right here.</p>
+    <div class="highlight-box">
+      <p>🎉 <strong>New Player Offer:</strong> Join us today and claim our exclusive welcome bonus package worth up to €1,000 plus 200 free spins across your first three deposits. Our registration process takes less than two minutes – your adventure starts now.</p>
+    </div>
+  </section>
+
+  <section id="games">
+    <h2>Our Game Collection</h2>
+    <p>Our game library is one of the most impressive in the online casino industry. We partner with the world's leading software providers – including NetEnt, Pragmatic Play, Evolution Gaming, Microgaming, Play'n GO, and many more – to ensure that our players always have access to the freshest, most entertaining content available anywhere online.</p>
+    <p>Our slots collection alone features thousands of titles, ranging from classic three-reel fruit machines to cutting-edge video slots packed with bonus features, free spins, multipliers, and progressive jackpots worth millions. We update our game library regularly so that our players are always among the first to enjoy the latest releases from the biggest studios in the business.</p>
+    <p>For those who prefer table games, we offer a superb selection of blackjack, roulette, baccarat, poker, and craps variants, each available in multiple versions to suit different playing styles and budgets. Our live casino section takes things to an entirely new level, connecting our players in real time with professional dealers streaming from state-of-the-art studios. The immersive atmosphere of our live tables brings the authentic casino floor experience directly to your screen, wherever you happen to be.</p>
+  </section>
+
+  <section id="features">
+    <h2>Why Choose Angliabet Casino</h2>
+    <p>We understand that players have many choices when it comes to online casinos, which is why we work tirelessly to make Angliabet Casino the clear standout option. Here is what sets us apart from the rest:</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h3>Safe & Licensed</h3>
+        <p>We operate under strict regulatory licenses, ensuring full player protection and fair play at all times.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">💳</div>
+        <h3>Fast Banking</h3>
+        <p>We support a wide range of payment methods with quick deposits and fast, hassle-free withdrawals.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🎁</div>
+        <h3>Big Bonuses</h3>
+        <p>Our generous promotions, loyalty rewards, and VIP programme keep giving back to our valued players.</p>
+      </div>
+    </div>
+  </section>
+
+    <div class="container page-updated">Page updated: <span id="page-updated-date"></span></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-title">Trusted Organisations</p>
+      <div class="trust-grid">
+        <a class="trust-item" href="https://www.gamstop.co.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/gamstop.png" alt="Gamstop" />
+        </a>
+        <a class="trust-item" href="https://www.gamcare.org.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/GamCare.png" alt="GamCare" />
+        </a>
+        <a class="trust-item" href="https://www.egba.eu/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/egba.svg" alt="EGBA" />
+        </a>
+        <a class="trust-item" href="https://www.begambleaware.org/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/gambleaware.png" alt="BeGambleAware" />
+        </a>
+        <a class="trust-item" href="https://www.gamblingcommission.gov.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/uk-gambling-commission.svg" alt="UK Gambling Commission" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="../about-us/">about us</a>
+        <a href="../contact-us/">contact us</a>
+        <a href="../bonus-policy/">bonus policy</a>
+        <a href="../privacy-policy/">privacy policy</a>
+        <a href="../responsible-gambling/">responsible gambling</a>
+      </div>
+
+      <p class="footer-title">Game Providers</p>
+      <div class="providers-grid">
+        <div class="provider-item"><img src="../providers/pragmatic-play-logo-png.png" alt="Pragmatic Play" /></div>
+        <div class="provider-item"><img src="../providers/evolution.png" alt="Evolution" /></div>
+        <div class="provider-item"><img src="../providers/netentlogo.png" alt="NetEnt" /></div>
+        <div class="provider-item"><img src="../providers/playn-go-logo.png" alt="Play'n GO" /></div>
+        <div class="provider-item"><img src="../providers/microgaming-logo.png" alt="Microgaming" /></div>
+        <div class="provider-item"><img src="../providers/Yggdrasil Gaming_Logo_1.png" alt="Yggdrasil" /></div>
+      </div>
+
+      <div class="copyright">Copyright 2026 Angliabet Casino. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var pageUpdatedDate = document.getElementById("page-updated-date");
+      if (!pageUpdatedDate) {
+        return;
+      }
+      var formatted = new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+      }).format(new Date());
+      pageUpdatedDate.textContent = formatted;
+    })();
+  </script>
+</body>
+</html>

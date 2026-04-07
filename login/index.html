@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login page for Angliabet Casino players with secure account access." />
+  <title>Login | Angliabet Casino</title>
+  <link rel="canonical" href="./" />
+  <link rel="icon" type="image/png" href="../favicon (2).png" />
+  <style>
+    :root {
+      --bg-main: #06051b;
+      --panel: #101033;
+      --header-footer: #00247d;
+      --accent: #1bb93d;
+      --text: #eef2ff;
+      --muted: #b5bfd8;
+      --border: #2c3762;
+      --gold: #ffd34d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at 15% 8%, #1a1f52 0%, var(--bg-main) 40%, #030210 100%);
+      color: var(--text);
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--header-footer);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      min-width: 0;
+    }
+
+    .logo img {
+      width: 170px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.4));
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .header-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #031108;
+      font-weight: 800;
+      padding: 11px 18px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 8px 18px rgba(27, 185, 61, 0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(27, 185, 61, 0.45);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.2;
+      margin: 0 0 14px;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    section {
+      margin: 44px 0;
+    }
+
+    .section-panel {
+      background: linear-gradient(180deg, rgba(16, 16, 51, 0.92), rgba(9, 9, 30, 0.95));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.35);
+    }
+
+    .seo-block p {
+      margin-top: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .seo-block ul {
+      margin: 0 0 18px;
+      padding-left: 24px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .content-page {
+      margin-top: 42px;
+      margin-bottom: 42px;
+    }
+
+    .content-page h1 {
+      margin-bottom: 16px;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+    }
+
+    .form-card {
+      margin: 18px 0 22px;
+      background: #0a0d2f;
+      border: 1px solid #25315f;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .form-field label {
+      font-weight: 700;
+      color: #d9e3ff;
+      font-size: 0.95rem;
+    }
+
+    .form-field input {
+      width: 100%;
+      border: 1px solid #3c4a7a;
+      border-radius: 10px;
+      padding: 12px;
+      background: #070a24;
+      color: #ffffff;
+      font: inherit;
+      outline: none;
+    }
+
+    .form-field input:focus {
+      border-color: #5a84ff;
+      box-shadow: 0 0 0 3px rgba(90, 132, 255, 0.2);
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checkbox-row input {
+      width: 16px;
+      height: 16px;
+      accent-color: #1bb93d;
+    }
+
+    .login-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .ghost-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 11px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      color: #e7edff;
+      font-weight: 700;
+    }
+
+    .page-updated {
+      text-align: center;
+      font-weight: 700;
+      color: #d4ddff;
+      margin: 42px auto 18px;
+      letter-spacing: 0.2px;
+    }
+
+    footer {
+      background: var(--header-footer);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 10px;
+      padding: 26px 0 20px;
+    }
+
+    .footer-title {
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      margin: 0 0 11px;
+    }
+
+    .trust-grid,
+    .providers-grid {
+      display: grid;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .trust-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      margin-bottom: 20px;
+    }
+
+    .providers-grid {
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      margin-bottom: 18px;
+    }
+
+    .trust-item,
+    .provider-item {
+      border: 1px solid #25315f;
+      border-radius: 12px;
+      background: #0a0d2a;
+      padding: 10px;
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trust-item img,
+    .provider-item img {
+      max-height: 44px;
+      object-fit: contain;
+      width: auto;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      font-size: 0.95rem;
+      transition: background-color 0.2s ease;
+      text-transform: lowercase;
+    }
+
+    .footer-links a:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.92rem;
+      color: #d7deff;
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      padding-top: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo,
+      .header-buttons,
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 660px) {
+      .section-panel {
+        padding: 18px;
+      }
+
+      .btn,
+      .ghost-link {
+        width: 100%;
+      }
+
+      .login-actions {
+        flex-direction: column;
+      }
+
+      .header-buttons {
+        width: 100%;
+      }
+
+      .header-buttons .btn {
+        flex: 1;
+        min-width: 130px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="../" aria-label="Angliabet Casino home">
+        <img src="../angliabet.webp" alt="Angliabet logo" />
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../login/">Login</a>
+        <a href="../bonus/">Bonus</a>
+        <a href="../app/">App</a>
+      </nav>
+
+      <div class="header-buttons">
+        <a class="btn" href="../login/" aria-label="Login">Login</a>
+        <a class="btn" href="../contact-us/" aria-label="Register">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container section-panel seo-block content-page">
+      <h1>Login to Angliabet Casino</h1>
+      <p>Access your profile, wallet, bonuses, and game history from one secure account area.</p>
+
+      <form class="form-card" action="#" method="post" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="login-identity">Email or Username</label>
+            <input id="login-identity" name="identity" type="text" autocomplete="username" required />
+          </div>
+
+          <div class="form-field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox-row" for="remember-me">
+              <input id="remember-me" name="remember" type="checkbox" />
+              <span>Remember me</span>
+            </label>
+            <a href="../contact-us/">Forgot password?</a>
+          </div>
+
+          <div class="login-actions">
+            <button class="btn" type="submit">Login</button>
+            <a class="ghost-link" href="../contact-us/">Need help with access?</a>
+          </div>
+        </div>
+      </form>
+
+      <h2>Secure Access and Player Protection</h2>
+      <p>We use account verification and protected sessions to keep your Angliabet profile safe. Please keep your login credentials private and always sign out on shared devices.</p>
+
+      <h3>Quick Tips Before You Sign In</h3>
+      <ul>
+        <li>Use your registered email or username only.</li>
+        <li>Check that your browser remembers the correct account.</li>
+        <li>Contact support if you cannot access your profile.</li>
+      </ul>
+    </section>
+
+    <div class="container page-updated">Page updated: <span id="page-updated-date"></span></div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-title">Trusted Organisations</p>
+      <div class="trust-grid">
+        <a class="trust-item" href="https://www.gamstop.co.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/gamstop.png" alt="Gamstop" />
+        </a>
+        <a class="trust-item" href="https://www.gamcare.org.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/GamCare.png" alt="GamCare" />
+        </a>
+        <a class="trust-item" href="https://www.egba.eu/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/egba.svg" alt="EGBA" />
+        </a>
+        <a class="trust-item" href="https://www.begambleaware.org/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/gambleaware.png" alt="BeGambleAware" />
+        </a>
+        <a class="trust-item" href="https://www.gamblingcommission.gov.uk/" target="_blank" rel="noopener noreferrer">
+          <img src="../trust badges/uk-gambling-commission.svg" alt="UK Gambling Commission" />
+        </a>
+      </div>
+
+      <div class="footer-links">
+        <a href="../about-us/">about us</a>
+        <a href="../contact-us/">contact us</a>
+        <a href="../bonus-policy/">bonus policy</a>
+        <a href="../privacy-policy/">privacy policy</a>
+        <a href="../responsible-gambling/">responsible gambling</a>
+      </div>
+
+      <p class="footer-title">Game Providers</p>
+      <div class="providers-grid">
+        <div class="provider-item"><img src="../providers/pragmatic-play-logo-png.png" alt="Pragmatic Play" /></div>
+        <div class="provider-item"><img src="../providers/evolution.png" alt="Evolution" /></div>
+        <div class="provider-item"><img src="../providers/netentlogo.png" alt="NetEnt" /></div>
+        <div class="provider-item"><img src="../providers/playn-go-logo.png" alt="Play n GO" /></div>
+        <div class="provider-item"><img src="../providers/microgaming-logo.png" alt="Microgaming" /></div>
+        <div class="provider-item"><img src="../providers/Yggdrasil Gaming_Logo_1.png" alt="Yggdrasil" /></div>
+      </div>
+
+      <div class="copyright">Copyright 2026 Angliabet Casino. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var pageUpdatedDate = document.getElementById("page-updated-date");
+      if (!pageUpdatedDate) {
+        return;
+      }
+      var formatted = new Intl.DateTimeFormat("en-GB", {
+        day: "2-digit",
+        month: "long",
+        year: "numeric"
+      }).format(new Date());
+      pageUpdatedDate.textContent = formatted;
+    })();
+  </script>
+</body>
+</html>
